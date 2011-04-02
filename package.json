@@ -1,0 +1,17 @@
+{
+  "name": "microtest",
+  "description": "Unit testing done right.",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:felixge/node-microtest.git"
+  },
+  "author": "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
+  "main": "./lib/node_modules/microtest/microtest.js",
+  "directories": {
+    "lib": "node_modules"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
