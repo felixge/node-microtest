@@ -13,5 +13,8 @@
   },
   "engines": {
     "node": "*"
+  },
+  "dependencies" {
+    "oop": "0.0.3,"
   }
 }
