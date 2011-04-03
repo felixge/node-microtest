@@ -8,7 +8,7 @@ var File = test.compile();
 
 test.before(function() {
   var file = new File();
-  return [file];
+  return file;
 });
 
 test.describe('file.open', function(file) {
