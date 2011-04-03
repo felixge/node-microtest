@@ -1,18 +1,28 @@
 var common = require('../../common');
 var test = common.microtest.module(common.fixture + '/example/file.js');
+var assert = require('assert');
 
 var FS = test.requires('fs');
 
 var File = test.compile();
 
-return;
-
-var File = test.compile();
 
 test.before(function() {
   var file = new File();
   return [file];
 });
+
+test.describe('funny', function() {
+  test.describe('people', function() {
+    function foo() {
+      assert.ok(false);
+      //bar();
+    }
+    foo();
+  });
+});
+
+return;
 
 test.describe('File.fromPath', function() {
   File.fromPath = test.compileInContext(File.fromPath);
