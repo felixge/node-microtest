@@ -24,27 +24,3 @@ test.describe('file.open', function(file) {
 
   assert.strictEqual(file._fd, FD);
 });
-
-return;
-
-test.describe('File.fromPath', function() {
-  File.fromPath = test.compileInContext(File.fromPath);
-
-  var PATH = scene.dummy('path');
-  var FILE = scene.dummy('file');
-
-  test
-    .expectNext('new', context.File)
-    .andReturn(FILE);
-
-  test
-    .expectNext(File)
-    .withArgs(PATH);
-
-  var file = File.fromPath(PATH);
-  assert.strictEqual(file, FILE);
-});
-
-test.describe('file.create', function() {
-
-});
