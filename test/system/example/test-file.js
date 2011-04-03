@@ -1,34 +1,37 @@
 var common = require('../../common');
-var test = common.microtest.module(common.fixture + '/file.js');
+var test = common.microtest.module(common.fixture + '/example/file.js');
 
-console.log(test);
+var FS = test.requires('fs');
+
+var File = test.compile();
 
 return;
 
-var test = new Microtest();
-var context = test.context;
-var scene = test.scene;
+var File = test.compile();
 
-context.module = {};
-context.File = scene.class();
-test.load('file.js');
+test.before(function() {
+  var file = new File();
+  return [file];
+});
 
-var File = context.module.exports;
-
-test.classMethod(function fromPath() {
+test.describe('File.fromPath', function() {
   File.fromPath = test.compileInContext(File.fromPath);
 
   var PATH = scene.dummy('path');
   var FILE = scene.dummy('file');
 
-  scene
+  test
     .expectNext('new', context.File)
     .andReturn(FILE);
 
-  scene
-    .expectNext(FILE, 'open')
+  test
+    .expectNext(File)
     .withArgs(PATH);
 
   var file = File.fromPath(PATH);
   assert.strictEqual(file, FILE);
+});
+
+test.describe('file.create', function() {
+
 });

@@ -14,7 +14,8 @@
   "engines": {
     "node": "*"
   },
-  "dependencies" {
-    "oop": "0.0.3,"
+  "dependencies": {
+    "oop": "0.0.3",
+    "fake": "0.0.8"
   }
 }
