@@ -8,7 +8,7 @@ test.injects('File');
 var File = test.compile();
 
 test.describe('File.fromPath', function() {
-  test.recompileInContext(File, 'fromPath');
+  test.recompileWithInjections(File, 'fromPath');
 
   var PATH = test.value('path');
   var FILE = test.object('File');
