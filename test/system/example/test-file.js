@@ -1,4 +1,10 @@
-var Microtest = require('microtest');
+var common = require('../../common');
+var test = common.microtest.module(common.fixture + '/file.js');
+
+console.log(test);
+
+return;
+
 var test = new Microtest();
 var context = test.context;
 var scene = test.scene;

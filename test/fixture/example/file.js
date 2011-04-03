@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 function File() {
   this._fd = null;
 }
