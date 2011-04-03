@@ -6,20 +6,17 @@ var FS = test.requires('fs');
 
 var File = test.compile();
 
-
 test.before(function() {
   var file = new File();
   return [file];
 });
 
-test.describe('funny', function() {
-  test.describe('people', function() {
-    function foo() {
-      assert.ok(false);
-      //bar();
-    }
-    foo();
-  });
+test.describe('file.open', function(file) {
+  test
+    .expectNext(FS, 'open')
+    .times(0);
+
+  file.open();
 });
 
 return;

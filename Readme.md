@@ -1,4 +1,4 @@
 ## Todo
 
-* Rename micro_test -> TestCase
-* Rename module_test -> ModuleTestCase
+* Differentiate between uncaught exceptions and Assertation / Scene errors
+* Create own assert module?
