@@ -5,12 +5,6 @@ function File() {
 }
 module.exports = File;
 
-File.fromFd = function(fd) {
-  var file = new File();
-  file._fd = fd;
-  return fd;
-}
-
 File.fromPath = function(path) {
   var file = new File();
   file.open(path);
