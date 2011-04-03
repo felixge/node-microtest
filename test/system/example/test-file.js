@@ -12,11 +12,17 @@ test.before(function() {
 });
 
 test.describe('file.open', function(file) {
+  var PATH = test.value('path');
+  var FD = test.value('fd');
+
   test
     .expectNext(FS, 'open')
-    .times(0);
+    .withArgs(PATH)
+    .andReturn(FD);
 
-  file.open();
+  file.open(PATH);
+
+  assert.strictEqual(file._fd, FD);
 });
 
 return;
