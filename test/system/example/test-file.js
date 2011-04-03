@@ -13,7 +13,7 @@ test.describe('File.fromPath', function() {
   var PATH = test.value('path');
   var FILE = test.object('File');
 
-  test.expectNext('new', test.injected.File, null, FILE)
+  test.expectNext('new', test.injected.File, [], FILE)
   test.expectNext(FILE, 'open', [PATH])
 
   var file = File.fromPath(PATH);
