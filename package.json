@@ -1,7 +1,7 @@
 {
   "name": "microtest",
   "description": "Unit testing done right.",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:felixge/node-microtest.git"
