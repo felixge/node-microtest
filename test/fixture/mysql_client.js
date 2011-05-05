@@ -6,6 +6,8 @@ var util = require('util'),
     Query = require('./query'),
     EventEmitter = require('events').EventEmitter;
 
+module.exports = Client;
+
 function Client(properties) {
   if (!(this instanceof Client)) {
     return new Client(properties);
@@ -37,7 +39,6 @@ function Client(properties) {
   }
 };
 util.inherits(Client, EventEmitter);
-module.exports = Client;
 
 Client.prototype.connect = function(cb) {
   var self = this;
